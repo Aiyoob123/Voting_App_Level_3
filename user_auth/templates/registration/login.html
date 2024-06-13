@@ -1,0 +1,68 @@
+<!--The below code was given in the task 22 pdf-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <!--This is my header of my html-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--This is a link to download bootstrap-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!--This is my title of my html-->
+        <title>Login</title>
+    </head>
+
+    <!--This is my body of my html-->
+    <body>
+        <div class="container mt-5">
+            <h1 class="display-4">Login as User</h1>
+
+            <!--This is a form-->
+            <form action="{% url 'user_auth:authenticate_user' %}" method="post" class="mt-4">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <!--This will allow the user to fill in there username-->
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="User" required>
+                </div>
+
+                <div class="form-group">
+                    <!--This will allow the user to fill in there password-->
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <style>
+                .signin{
+                display: block;
+                width: 7%;
+                margin-top: 10px;
+                padding: 7px;
+                background: #007bff;
+                color: white;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+                }
+                .link{
+                    color: #ffffff;
+                }
+                .link:hover{
+                    color: #ffffff;
+                    text-underline-offset: none;
+                    width: 10%;
+                }
+            </style>
+            <a class="link" href="{% url 'user_auth:signup' %}" ><button class="signin">Sign Up</button></a>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+
+</html>

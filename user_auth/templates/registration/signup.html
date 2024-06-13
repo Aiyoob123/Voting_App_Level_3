@@ -1,0 +1,38 @@
+<!-- templates/registration/signup.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--This is my header of my html-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--This is a link to download bootstrap-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!--This is my title of my html-->
+        <title>{% block title %}Sign Up{% endblock %}</title>
+    </head>
+
+    <!--This is my body of my html-->
+    <body>
+        <div class="container mt-5">
+            {% block content %}
+            <h2 class="mb-4">Sign up</h2>
+            
+            <!--This is a form-->
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.as_p }}
+                </div>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </form>
+            {% endblock %}
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
