@@ -9,6 +9,19 @@ Welcome to our online voting website, where you can engage in interactive decisi
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
+- [Django Voting Application](#django-voting-application)
+- [Prerequisites](#prerequisites)
+
+  
+# Django Voting Application
+
+This is a simple voting application built with Django. The application allows users to create polls, vote on them, and view results.
+
+## Prerequisites
+
+- Python 3.x
+- pip (Python package installer)
+- Docker (optional, for running the application in a container)
 
   
 ## Installation
