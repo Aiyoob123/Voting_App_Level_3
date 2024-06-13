@@ -13,7 +13,11 @@ django.setup()
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+<<<<<<< HEAD
 project = 'Voting App'
+=======
+project = 'Voting Project'
+>>>>>>> container
 copyright = '2024, Aiyoob'
 author = 'Aiyoob'
 release = '00.00.01'
