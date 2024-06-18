@@ -1,6 +1,7 @@
 import os
 import sys
 import django
+
 sys.path.insert(0, os.path.abspath('..'))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'voting_project.settings'
 django.setup()
@@ -13,11 +14,8 @@ django.setup()
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-<<<<<<< HEAD
 project = 'Voting App'
-=======
 project = 'Voting Project'
->>>>>>> container
 copyright = '2024, Aiyoob'
 author = 'Aiyoob'
 release = '00.00.01'
